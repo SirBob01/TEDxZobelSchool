@@ -1,0 +1,9 @@
+Website Framework
+- Landing Page (INITIAL WEBPAGE)
+	- Registration
+	- Speaker Nomination
+	- FAQ
+- Homepage
+- About Page
+- Frequently Asked Questions
+- Contact Us
