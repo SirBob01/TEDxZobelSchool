@@ -24,3 +24,8 @@ a {
 	text-align: center;
 	margin-bottom: 100px;
 }
+
+#logo {
+	width: 380;
+	height: 220;
+}
