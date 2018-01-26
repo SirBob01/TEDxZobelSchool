@@ -57,15 +57,21 @@ a {
 	color: #FFFFFF;
 }
 
+#head {
+	height: 10%;
+	padding: 20px;
+}
+
 #body {
 	height: 100%;
+	padding: 20px;
 }
 
 #footer {
 	position: relative;
 	height: 30%;
-	width: 100%;
 	bottom: 0;
+	padding: 20px;
 	background-color: #FFFFFF;
 	color: #000000;
 	border-top: solid 3px #FF5555;
