@@ -3,6 +3,7 @@
 	<head>
 		<title>TEDxZobelSchool - Ideas Worth Spreading</title>
 		<link rel="stylesheet" href="main.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -10,13 +11,31 @@
 		</div>
 
 		<div id="body">
-			<div class="post">
-				First Event
+			<div id="main-landing">	
+				<img src="media/logo.png" width="50%" height="50%"/>		
+				<h1 id="countdown"></h1>
+				<a class="landing-link" href="register.html">Register</a>
+				<a class="landing-link" href="nominate.html">Nominate Speaker</a>
 			</div>
 		</div>
 
 		<div id="footer">
+			<a class="footer-link" href="faq.html">FAQ</a>
+			<a class="footer-link" href="about.html">About</a>
 			<span id="license">© TEDxZobelSchool - This independent TEDx event is operated under license from TED.</span>
 		</div>
+
+		<script>
+			var target_date = new Date("Mar 16, 2018 08:00:00").getTime()
+			var x = setInterval(function() {
+				var now = new Date().getTime()
+				var distance = target_date - now
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+				$("#countdown").html(days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds")
+			}, 1000)
+		</script>
 	</body>
 </html>

@@ -15,3 +15,12 @@ a {
 	color: #FF5555;
 	font-weight: bold;
 }
+
+#countdown {
+	color: #FF5555;
+}
+
+#main-landing {
+	text-align: center;
+	margin-bottom: 100px;
+}
