@@ -14,8 +14,13 @@
 			<div id="main-landing">	
 				<img src="media/logo.png" id="logo"/>
 				<h1 id="countdown"></h1>
-				<h3><a class="landing-link" href="register.html">Register</a></h3>
-				<h3><a class="landing-link" href="nominate.html">Nominate Speaker</a></h3>
+
+				<a href="register.html">
+					<button class="landing-link fadeIn">Register Now</button>
+				</a><br/>
+				<a href="nominate.html">
+					<button class="landing-link fadeIn">Nominate Speaker</button>
+				</a>
 			</div>
 		</div>
 
@@ -26,14 +31,16 @@
 		</div>
 
 		<script>
-			var target_date = new Date("Mar 16, 2018 08:00:00").getTime();
+			var target_time = new Date("Mar 16, 2018 08:00:00").getTime();
 			var x = setInterval(function() {
 				var now = new Date().getTime();
-				var distance = target_date - now;
+				var distance = target_time - now;
+
 				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
 				$("#countdown").html(days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
 			}, 1000);
 		</script>
