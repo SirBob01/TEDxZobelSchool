@@ -42,7 +42,8 @@ a {
 	background-color: #FFFFFF;
 	color: #000000;
 	border-top: solid 5px #FF0000;
-	font-size: 16px;
+	font-size: 1.3vw;
+	font-size: 18px;
 }
 
 .ted-link {
@@ -73,6 +74,7 @@ a {
 	background-image: url('media/uprising-poster.png'); 
 	color: #000000; 
 	background-size: 100% auto;
+	min-height: 100vh;
 }
 
 #logo {
@@ -82,9 +84,11 @@ a {
 
 #landing-date {
 	opacity: 0;
-	margin-left: 55%;
-	padding-top: 17%;
-	font-size: 40px;
+	margin-left: 45%;
+	padding-top: 13%;
+	font-size: 45px;
+	font-size: 3vw;
+	color: #444444;
 }
 
 #landing-description-container {
@@ -94,13 +98,14 @@ a {
 	border-radius: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #FF5555;
+	background-color: #FF3333;
 	color: #FFFFFF;
 	opacity: 0;
 }
 
 #landing-description {
-	font-size: 20px;
+	font-size: 24px;
+	font-size: 1.3vw;
 }
 
 .landing-link {
@@ -117,6 +122,7 @@ a {
 	background-color: #FF0000;
 	color: #FFFFFF;
 	font-size: 24px;
+	font-size: 2vw;
 	text-decoration: none;
 }
 
