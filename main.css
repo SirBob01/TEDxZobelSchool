@@ -42,8 +42,7 @@ a {
 	background-color: #FFFFFF;
 	color: #000000;
 	border-top: solid 5px #FF0000;
-	font-size: 1.3vw;
-	font-size: 18px;
+	font-size: calc(50%+1.3vw);
 }
 
 .ted-link {
@@ -75,6 +74,7 @@ a {
 	color: #000000; 
 	background-size: 100% auto;
 	min-height: 100vh;
+	padding-bottom: 1vh;
 }
 
 #logo {
@@ -86,26 +86,24 @@ a {
 	opacity: 0;
 	margin-left: 45%;
 	padding-top: 13%;
-	font-size: 45px;
-	font-size: 3vw;
+	font-size: calc(100%+3vw);
 	color: #444444;
 }
 
 #landing-description-container {
 	padding: 2%;
-	width: 70%;
+	width: 50%;
 	height: auto;
 	border-radius: 50px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 5vw;
 	background-color: #FF3333;
 	color: #FFFFFF;
 	opacity: 0;
+	text-align: justify;
 }
 
 #landing-description {
-	font-size: 24px;
-	font-size: 1.3vw;
+	font-size: calc(100%+1.3vw);
 }
 
 .landing-link {
@@ -118,8 +116,7 @@ a {
 
 	background-color: #FF0000;
 	color: #FFFFFF;
-	font-size: 24px;
-	font-size: 2vw;
+	font-size: calc(100%+2.5vw);
 	text-decoration: none;
 }
 
