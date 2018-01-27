@@ -9,15 +9,11 @@ a, button, .footer-link {
 }
 
 @keyframes backgroundscroll {
-	0% {background-position: left top, right top;}
-	50% {background-position: left -100px, right -100px;}
-	100% {background-position: left top, right top;}
+	100% {background-position: left -100%, right -100%;}
 }
 
 @-webkit-keyframes backgroundscroll {
-	0% {background-position: left top, right top;}
-	50% {background-position: left -100px, right -100px;}
-	100% {background-position: left top, right top;}
+	50% {background-position: left -100%, right -100%;}
 }
 
 body {
@@ -71,8 +67,8 @@ a {
 	background-position: left top, right top;
 	background-size: 30% auto;
 	background-repeat: repeat-y;
-	animation: backgroundscroll 3s infinite;
-	-webkit-animation: backgroundscroll 3s infinite;
+	animation: backgroundscroll 5s linear infinite;
+	-webkit-animation: backgroundscroll 5s linear infinite;
 	height: 100vh;
 }
 
