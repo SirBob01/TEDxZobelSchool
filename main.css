@@ -124,6 +124,12 @@ a {
 	color: #FFFFFF;
 }
 
+#arrow-down {
+	width: 256px;
+	height: 256px;
+	margin-top: 5%;
+}
+
 .footer-link {
 	color: #333333;
 }
