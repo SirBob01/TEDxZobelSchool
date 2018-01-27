@@ -146,14 +146,13 @@ a {
 }
 
 #arrow-down-container {
-	width: 5vw;
-	height: 5vw;
-	margin-top: 3%;
+	width: calc(14px + 5vw);
+	height: calc(14px + 5vw);
 }
 
 .arrow-down {
-	width: 5vw;
-	height: 5vw;
+	width: calc(14px + 5vw);
+	height: calc(14px + 5vw);
 }
 
 .footer-link {
