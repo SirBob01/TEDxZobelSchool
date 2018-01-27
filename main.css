@@ -9,7 +9,10 @@ a, button, .footer-link {
 }
 
 body {
+	height: 100%;
+	width: 100%;
 	margin: 0;
+	padding: 0;
 	background-color: #000000;
 	color: #FFFFFF;
 	font-family: 'Oxygen';
@@ -21,13 +24,13 @@ a {
 
 #footer {
 	position: relative;
-	height: 30%;
+	width: 100%;
+	height: 40vh;
 	bottom: 0;
-	padding-left: 5%;
-	padding-top: 3%;
 	background-color: #FFFFFF;
 	color: #000000;
 	border-top: solid 5px #FF0000;
+	font-size: 16px;
 }
 
 .ted-link {
@@ -40,7 +43,7 @@ a {
 }
 
 .main-landing {
-	height: 100%;
+	height: 100vh;
 }
 
 #logo {
@@ -52,7 +55,7 @@ a {
 	opacity: 0;
 	margin-left: 55%;
 	padding-top: 17%;
-	font-size: 50;
+	font-size: 50px;
 }
 
 #landing-description-container {
@@ -64,10 +67,11 @@ a {
 	margin-right: auto;
 	background-color: #FF5555;
 	color: #FFFFFF;
+	opacity: 0;
 }
 
 #landing-description {
-	font-size: 24;
+	font-size: 24px;
 }
 
 .landing-link {
@@ -83,7 +87,7 @@ a {
 
 	background-color: #FF0000;
 	color: #FFFFFF;
-	font-size: 24;
+	font-size: 24px;
 	text-decoration: none;
 }
 
@@ -103,10 +107,11 @@ a {
 .footer-link-set {
 	float: right;
 	margin-right: 10%;
+	margin-top: 3%;
 }
 
 .social {
-	bottom: 10px;
+	bottom: 5%;
 	position: absolute;
 	text-align: center;
     width: 60%;
@@ -115,15 +120,16 @@ a {
 }
 
 .social-icon {
-	width: 40px;
-	height: 40px;
-	margin: 5px;
+	width: 5%;
+	height: 5%;
+	margin: 1%;
 }
 
 #license {
 	text-align: center;
 	width: 35%;
-	overflow: auto;
+	margin-top: 3%;
+	margin-left: 10%;
 	position: absolute;
 	float: left;
 }
