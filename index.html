@@ -1,41 +1,126 @@
 <html>
 	<head>
-		<title>TEDxZobelSchool - Ideas Worth Spreading</title>
+		<title>TEDxZobelSchool – Ideas Worth Spreading</title>
 		<link rel="stylesheet" href="main.css"/>
+		<link rel="stylesheet" href="animate.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 
 	<body>
 		<div id="body">
-			<div id="main-landing">	
-				<img src="media/logo.png" id="logo"/>
-				<h1 id="countdown"></h1>
+			<div class="main-landing">
+				<img src="media/landing-1.png" style="position: absolute; width: 100%; height: auto; z-index: -1"/>
+				<center>
+					<img src="media/logo-black.png" id="logo"/>
+					<h1 id="countdown"></h1>
 
-				<a href="register.html">
-					<button class="landing-link fadeIn">Register Now</button>
-				</a><br/>
-				<a href="nominate.html">
-					<button class="landing-link fadeIn">Nominate Speaker</button>
-				</a>
+					<a href="register.html">
+						<button class="landing-link">Register Now</button>
+					</a><br/>
+
+					<a href="nominate.html">
+						<button class="landing-link">Nominate Speaker</button>
+					</a><br/><br/><br/><br/>
+
+					<a href="#details" id="arrow-down">
+						<img src="media/arrow-down.png"/>
+					</a>
+				</center>
+			</div>
+
+			<div class="main-landing" style="background-color: #656565; color: #000000;" name="details">
+				<img src="media/uprising-poster.png" id="theme-poster"/>
+				<h1 id="landing-date">March 16, 2018</h1>
+				<div id="landing-description-container">
+					<h1>What is TEDxZobelSchool?</h1>
+					<p id="landing-description">Insert description here.</p>
+				</div>
 			</div>
 		</div>
 
 		<div id="footer">
-			<div id="about-footer">
+			<span id="license">TEDxZobelSchool – All rights reserved 2018<br/>This independent TEDx event is operated under license from TED.</span>
+
+			<div class="footer-link-set">
+				<b>Contact Us</b><br/>
+				<a class="footer-link" href="team.html">Our Team</a><br/>
+			</div>
+
+			<div class="footer-link-set">
 				<b>About</b><br/>
 				<a class="footer-link" href="faq.html">Frequently Asked Questions</a><br/>
 				<a class="footer-link" href="about.html">About TEDxZobelSchool</a><br/>
 			</div>
 
-			<div id="team-footer">
-				<b>Events</b><br/>
-				<a class="footer-link" href="team.html">Our Team</a><br/>
-				<a class="footer-link" href="contact.html">Contact Us</a><br/>
+			<div class="social">
+				<!-- Social media links here -->
+				<a href="facebook.com">
+					<img src="media/facebook-logo.png" class="social-icon"/>
+				</a>
+				<a href="twitter.com">
+					<img src="media/twitter-logo.png" class="social-icon"/>
+				</a>
+				<a href="another.com">
+					<img src="media/twitter-logo.png" class="social-icon"/>
+				</a>
 			</div>
-			<span id="license">© TEDxZobelSchool - This independent TEDx event is operated under license from TED.</span>
 		</div>
 
 		<script>
+			function isElementInViewport(el) {
+				//special bonus for those using jQuery
+				if (typeof jQuery === "function" && el instanceof jQuery) {
+					el = el[0];
+				}
+
+				var rect = el.getBoundingClientRect();
+
+				return (
+					rect.top >= 0 &&
+					rect.left >= 0 &&
+					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+					rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+				);
+			}
+
+			// Update all animations to occur only when within the viewport
+			var update = setInterval(function() {			
+				if(isElementInViewport($("#landing-description-container"))) {
+					$("#landing-description-container").css("opacity", "1").addClass("animated fadeInLeft ")
+				}
+				if(isElementInViewport($("#landing-date"))) {
+					$("#landing-date").css("opacity", "1").addClass("animated fadeIn ")
+				}
+				if(isElementInViewport($(".landing-link"))) {
+					$(".landing-link").css("opacity", "1").addClass("animated fadeIn ")
+				}
+			}, 100)
+
+			// Smooth scroll
+			$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						event.preventDefault();
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 1000, function() {
+							var $target = $(target);
+							$target.focus();
+							if ($target.is(":focus")) {
+								return false;
+							} else {
+								$target.attr('tabindex','-1');
+								$target.focus();
+							};
+						});
+					}
+				}
+			});
+
+			// Countdown timer
 			var target_time = new Date("Mar 16, 2018 08:00:00").getTime();
 			var x = setInterval(function() {
 				var now = new Date().getTime();
