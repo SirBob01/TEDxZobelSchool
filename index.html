@@ -25,7 +25,7 @@
 					</a><br/>
 
 					<a href="nominate.html">
-						<button class="landing-link">Nominate Speaker</button>
+						<button class="landing-link">Nominate a Speaker</button>
 					</a><br/>
 
 					<div id="arrow-down-container">
@@ -37,31 +37,33 @@
 			</div>
 
 			<div class="main-landing" id="middle-container" name="details">
+				<img src="media/uprising.png" id="theme-logo"/>
 				<h1 id="landing-date">Friday, 16th of March 2018 </h1>
 
 				<div id="landing-description-container">
-					<h1>What is TEDx?</h1>
-					<p id="landing-description">&emsp;In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxZobelSchool, where x = independently organized TED event. At our TEDxZobelSchool event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
+					<h1 id="landing-description-header">What is TEDx?</h1>
+					<p id="landing-description-content">&emsp;In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxZobelSchool, where x = independently organized TED event. At our TEDxZobelSchool event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
 				</div>
 			</div>
 		</div>
-
 		<div id="footer">
-			<span id="license">TEDxZobelSchool – All rights reserved 2018<br/>This independent TEDx event is operated under license from TED.</span>
+			<span id="license">TEDxZobelSchool – All rights reserved 2018<br/><br/>
+				This independent TEDx event is operated under license from TED.</span>
 
 			<div class="footer-link-set">
 				<b>Contact Us</b><br/>
-				<a class="footer-link" href="team.html">Our Team</a><br/>
+				<a class="footer-link" href="http://www.dlszobel.edu.ph">De La Salle Santiago Zobel</a><br/>
+				<a class="footer-link" href="#">Email</a><br/>
 			</div>
 
 			<div class="footer-link-set">
 				<b>About</b><br/>
-				<a class="footer-link" href="faq.html">Frequently Asked Questions</a><br/>
 				<a class="footer-link" href="about.html">About TEDxZobelSchool</a><br/>
+				<a class="footer-link" href="faq.html">Frequently Asked Questions</a><br/>
+				<a class="footer-link" href="team.html">Our Team</a><br/>
 			</div>
 
 			<div class="social">
-				<!-- Social media links here -->
 				<a href="https://facebook.com">
 					<img src="media/facebook-logo.png" class="social-icon"/>
 				</a>
@@ -84,8 +86,6 @@
 				var rect = el.getBoundingClientRect();
 
 				return (
-					rect.top >= 0 &&
-					rect.left >= 0 &&
 					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
 					rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
 				);

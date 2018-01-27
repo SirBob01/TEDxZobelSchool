@@ -9,19 +9,19 @@ a, button, .footer-link {
 }
 
 @keyframes backgroundscroll {
-	0% {background-position: 0 0;}
-	50% {background-position: 0 -100px;}
-	100% {background-position: 0 0;}
+	0% {background-position: left top, right top;}
+	50% {background-position: left -100px, right -100px;}
+	100% {background-position: left top, right top;}
 }
 
 @-webkit-keyframes backgroundscroll {
-	0% {background-position: 0 0;}
-	50% {background-position: 0 -100px;}
-	100% {background-position: 0 0;}
+	0% {background-position: left top, right top;}
+	50% {background-position: left -100px, right -100px;}
+	100% {background-position: left top, right top;}
 }
 
 body {
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -34,22 +34,22 @@ a {
 	text-decoration: none;
 }
 
+#body {
+	display: inline-block;
+	min-height: 100%;
+}
+
 #footer {
 	position: relative;
 	width: 100%;
-	height: 40vh;
-	max-height: 265px;
+	height: auto;
+	min-height: 40vh;
+
 	bottom: 0;
 	background-color: #FFFFFF;
 	color: #000000;
 	border-top: solid 5px #FF0000;
-	font-size: 18px;
-}
-
-@media screen and (min-width: 768px) {
-	#footer {
-		font-size: 16px;
-	}
+	font-size: calc(12px + 0.5vw);
 }
 
 .ted-link {
@@ -63,30 +63,39 @@ a {
 
 .main-landing {
 	width: 100%;
-	height: 100vh;
-	max-height: 662px;
 	vertical-align: top;
 	display: inline-block;
-	background-repeat: no-repeat;
 }
 
 #top-container {
-	background-image: url('media/landing-1.png');
-	background-size: 100% auto;
+	background-image: url('media/landing-1-left.png'), url('media/landing-1-right.png');
+	background-position: left top, right top;
+	background-size: 30% auto;
+	background-repeat: repeat-y;
 	animation: backgroundscroll 3s infinite;
 	-webkit-animation: backgroundscroll 3s infinite;
+	height: 100vh;
 }
 
 #middle-container {
-	background-image: url('media/uprising-poster.png'); 
+	background-image: url('media/landing-2-bg.png'); 
 	color: #000000; 
 	background-size: 100% auto;
-	min-height: 100vh;
-	padding-bottom: 1vh;
+	background-repeat: repeat-y;
+	padding-bottom: 10vh;
+	height: 100%;
 }
 
 #logo {
-	width: 30%;
+	width: calc(90px + 30%);
+	height: auto;
+}
+
+#theme-logo {
+	position: absolute;
+	margin-left: 5vw;
+	margin-top: 5vw;
+	width: 60vw;
 	height: auto;
 }
 
@@ -94,24 +103,28 @@ a {
 	opacity: 0;
 	margin-left: 45%;
 	padding-top: 13%;
-	font-size: 45px;
+	font-size: calc(20px + 1.5vw);
 	color: #444444;
 }
 
 #landing-description-container {
 	padding: 2%;
-	width: 50%;
+	width: 70%;
 	height: auto;
-	border-radius: 50px;
-	margin-left: 5vw;
+	border-radius: 2vw;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: #FF3333;
 	color: #FFFFFF;
 	opacity: 0;
-	text-align: justify;
 }
 
-#landing-description {
-	font-size: 18px;
+#landing-description-header {
+	font-size: calc(20px + 0.3vw);
+}
+
+#landing-description-content {
+	font-size: calc(18px + 0.2vw);
 }
 
 .landing-link {
@@ -154,30 +167,31 @@ a {
 
 .footer-link-set {
 	float: right;
-	margin-right: 10%;
+	margin-right: 5%;
 	margin-top: 3%;
-}
-
-.social {
-	bottom: 5%;
-	position: absolute;
-	text-align: center;
-    width: 60%;
-    left: 50%;
-    margin-left: -30%;
+	display: inline-block;
 }
 
 .social-icon {
-	width: 5%;
-	height: 5%;
-	margin: 1%;
+	width: 32px;
+	height: 32px;
+	margin: 0.5%;
 }
+
+.social {
+	height: 32px;
+	width: 100%;
+	margin-top: 5%;
+	display: inline-block;
+	text-align: center;
+}
+
 
 #license {
 	text-align: center;
 	width: 35%;
 	margin-top: 3%;
-	margin-left: 10%;
-	position: absolute;
+	margin-left: 5%;
 	float: left;
+	display: inline-block;
 }
