@@ -8,6 +8,18 @@ a, button, .footer-link {
 	transition: all .2s linear;
 }
 
+@keyframes backgroundscroll {
+	0% {background-position: 0 0;}
+	50% {background-position: 0 -100px;}
+	100% {background-position: 0 0;}
+}
+
+@-webkit-keyframes backgroundscroll {
+	0% {background-position: 0 0;}
+	50% {background-position: 0 -100px;}
+	100% {background-position: 0 0;}
+}
+
 body {
 	height: 100%;
 	width: 100%;
@@ -43,7 +55,23 @@ a {
 }
 
 .main-landing {
+	width: 100%;
 	height: 100vh;
+	vertical-align: top;
+	display: inline-block;
+}
+
+#top-container {
+	background-image: url('media/landing-1.png');
+	background-size: 100% auto;
+	animation: backgroundscroll 3s infinite;
+	-webkit-animation: backgroundscroll 3s infinite;
+}
+
+#middle-container {
+	background-image: url('media/uprising-poster.png'); 
+	color: #000000; 
+	background-size: 100% auto;
 }
 
 #logo {
@@ -55,11 +83,11 @@ a {
 	opacity: 0;
 	margin-left: 55%;
 	padding-top: 17%;
-	font-size: 50px;
+	font-size: 40px;
 }
 
 #landing-description-container {
-	padding: 3%;
+	padding: 2%;
 	width: 70%;
 	height: auto;
 	border-radius: 50px;
@@ -71,7 +99,7 @@ a {
 }
 
 #landing-description {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .landing-link {
