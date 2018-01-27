@@ -59,6 +59,7 @@ a {
 	height: 100vh;
 	vertical-align: top;
 	display: inline-block;
+	background-repeat: no-repeat;
 }
 
 #top-container {
