@@ -1,6 +1,10 @@
 <html>
 	<head>
 		<title>TEDxZobelSchool – Ideas Worth Spreading</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link rel="stylesheet" href="main.css"/>
 		<link rel="stylesheet" href="animate.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -8,8 +12,8 @@
 
 	<body>
 		<div id="body">
-			<div class="main-landing">
-				<img src="media/landing-1.png" style="position: absolute; width: 100%; height: auto; z-index: -1"/>
+			<div class="main-landing" id="top-container">
+				<img src="media/landing-1.png" style="position: absolute; width: 100%; height: auto; z-index: -1" id="coolbg"/>
 				<center>
 					<img src="media/logo-black.png" id="logo"/>
 					<h1 id="countdown"></h1>
@@ -22,15 +26,15 @@
 						<button class="landing-link">Nominate Speaker</button>
 					</a><br/><br/><br/><br/>
 
-					<a href="#details" id="arrow-down">
+					<a href="#details">
 						<img src="media/arrow-down.png"/>
 					</a>
 				</center>
 			</div>
 
-			<div class="main-landing" style="background-color: #656565; color: #000000;" name="details">
-				<img src="media/uprising-poster.png" id="theme-poster"/>
+			<div class="main-landing" style="background-image: url('media/uprising-poster.png'); color: #000000; background-size: 100% auto" name="details">
 				<h1 id="landing-date">March 16, 2018</h1>
+
 				<div id="landing-description-container">
 					<h1>What is TEDxZobelSchool?</h1>
 					<p id="landing-description">Insert description here.</p>
@@ -54,14 +58,14 @@
 
 			<div class="social">
 				<!-- Social media links here -->
-				<a href="facebook.com">
+				<a href="https://facebook.com">
 					<img src="media/facebook-logo.png" class="social-icon"/>
 				</a>
-				<a href="twitter.com">
+				<a href="https://twitter.com">
 					<img src="media/twitter-logo.png" class="social-icon"/>
 				</a>
-				<a href="another.com">
-					<img src="media/twitter-logo.png" class="social-icon"/>
+				<a href="https://snapchat.com">
+					<img src="media/snapchat-logo.png" class="social-icon"/>
 				</a>
 			</div>
 		</div>
@@ -118,6 +122,22 @@
 						});
 					}
 				}
+			});
+
+			$(function () {
+				var $image = $('#coolbg');
+				function animate_img() {
+					if ($image.css('top') == '0px') {
+						$image.animate({top: '-100px'}, 2500, function () {
+							animate_img();
+						});
+					} else {
+						$image.animate({top: '0px'}, 2500, function () {
+							animate_img();
+						});
+					}
+				}
+				animate_img();
 			});
 
 			// Countdown timer
