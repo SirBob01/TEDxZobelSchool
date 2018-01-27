@@ -93,7 +93,7 @@ a {
 	position: absolute;
 	margin-left: 5vw;
 	margin-top: 5vw;
-	width: 60vw;
+	width: calc(100px + 50vw);
 	height: auto;
 }
 
