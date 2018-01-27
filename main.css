@@ -72,8 +72,8 @@ a {
 	background-position: left top, right top;
 	background-size: 30% auto;
 	background-repeat: repeat-y;
-	animation: backgroundscroll 10s infinite;
-	-webkit-animation: backgroundscroll 10s infinite;
+	animation: backgroundscroll 20s infinite;
+	-webkit-animation: backgroundscroll 20s infinite;
 }
 
 #middle-container {
