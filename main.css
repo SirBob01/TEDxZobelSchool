@@ -148,6 +148,7 @@ a {
 #arrow-down-container {
 	width: calc(14px + 5vw);
 	height: calc(14px + 5vw);
+	margin-bottom: 3vh;
 }
 
 .arrow-down {
