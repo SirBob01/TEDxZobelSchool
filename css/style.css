@@ -34,10 +34,6 @@ a {
 	text-decoration: none;
 }
 
-#body {
-	display: inline-block;
-	min-height: 100%;
-}
 
 #footer {
 	position: relative;
@@ -68,7 +64,7 @@ a {
 }
 
 #top-container {
-	background-image: url('media/landing-1-left.png'), url('media/landing-1-right.png');
+	background-image: url('bg/landing-1-left.png'), url('bg/landing-1-right.png');
 	background-position: left top, right top;
 	background-size: 30% auto;
 	background-repeat: repeat-y;
@@ -77,7 +73,7 @@ a {
 }
 
 #middle-container {
-	background-image: url('media/landing-2-bg.png'); 
+	background-image: url('bg/landing-2-bg.png'); 
 	color: #000000; 
 	background-size: 100% auto;
 	background-repeat: repeat-y;
@@ -85,11 +81,13 @@ a {
 }
 
 #logo {
+	opacity: 0;
 	width: calc(90px + 30%);
 	height: auto;
 }
 
 #theme-logo {
+	opacity: 0;
 	position: absolute;
 	margin-left: 5vw;
 	margin-top: 5vw;
@@ -151,8 +149,8 @@ a {
 }
 
 .arrow-down {
-	width: calc(14px + 5vw);
-	height: calc(14px + 5vw);
+	width: calc(20px + 3vw);
+	height: calc(20px + 3vw);
 }
 
 .footer-link {
